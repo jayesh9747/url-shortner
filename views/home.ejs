@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-shorter</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+
+
+        <header class="p-5 text-center bg-light">
+            <h1>url shortner </h1>
+        </header>
+
+        <div class="card">
+            
+            <div class="card-header">WELCOME</div>
+            <div class="card-body">
+            <form action="/url" method="post">
+              <blockquote class="blockquote mb-0">
+                <p>CREATE YOUR SHORT-URL</p>
+                <div >
+                <div class="form-outline " style="width: 75%;" >
+                    <input type="text" id="form12" name="url" placeholder="https://www.Google.com"  class="form-control" re/>
+                    <label class="form-label" for="form12">url</label>
+                    <div class="float-end p-2"> 
+                        <button class="btn btn-primary " type="submit">Submit</button>
+                    </div> 
+                </div>
+                
+                </div>
+              </blockquote>
+            </form>
+            </div>
+        </div>
+
+
+        
+        
+
+        <% if(locals.id){ %>
+            <div class="card m-5 text-center" style="color: white; background: #000;">
+                <div class="card-body">New URL Generated: http://localhost:5000/jsly/<%=id %></div>
+            </div>
+
+                <div style="color: white; background: #000;"  class="btn" >
+                    <a href="/"  style="text-decoration: none;" >back to home</a>
+                </div>
+        <% } %>
+
+                <div class="overflow-auto pt-5">
+
+                    <% if(locals.urls){%>
+                        <h2 class="text-center">All shortner link</h2>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S. No.</th>
+                                    <th scope="col">URL</th>
+                                    <th scope="col">ShortURL</th>
+                                    <th scope="col">No of times views</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% urls.forEach((url,index)=>{ %>
+                                    <tr>
+                                        <th scope="row">
+                                            <%= index + 1 %>
+                                        </th>
+                                        <td>
+                                            <%=url.redirectURL %>
+                                        </td>
+                                        <td>
+                                            <%="http://localhost:8001/jsly/"+ url.shortId %>
+                                        </td>
+                                        <td>
+                                            <%= url.visitHistory.length %>
+                                        </td>
+                                        </th>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                        <% } %>
+                </div>
+
+    </div>
+
+
+
+    <footer class="bg-light text-center text-lg-start pt-5">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <p>All rights is reserved by js</p>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+
+</body>
+
+</html>
