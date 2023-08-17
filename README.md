@@ -25,9 +25,6 @@ The URL Shortener Web App is a simple yet powerful tool that allows you to creat
 5. **Running the App:** Start the web app by running `npm start`. The app will be accessible at `http://localhost:5000`.
 
 
-## API Documentation
-
-For developers, the API documentation provides details on how to interact with the URL shortening service programmatically. It covers endpoints for URL shortening, retrieving analytics, managing user accounts, and more. You can find the API documentation at `http://localhost:3000/api-docs`.
 
 ## Contributing
 
