@@ -36,7 +36,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions, suggestions, or need assistance, feel free to contact us at contact@example.com or open an issue in this repository.
+If you have any questions, suggestions, or need assistance, feel free to contact us at jayeshsavaliya0167@gmail.com or open an issue in this repository.
 
 ---
 
