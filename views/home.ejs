@@ -22,40 +22,42 @@
         </header>
 
         <div class="card">
-            
+
             <div class="card-header">WELCOME</div>
             <div class="card-body">
-            <form action="/url" method="post">
-              <blockquote class="blockquote mb-0">
-                <p>CREATE YOUR SHORT-URL</p>
-                <div >
-                <div class="form-outline " style="width: 75%;" >
-                    <input type="text" id="form12" name="url" placeholder="https://www.Google.com"  class="form-control" re/>
-                    <label class="form-label" for="form12">url</label>
-                    <div class="float-end p-2"> 
-                        <button class="btn btn-primary " type="submit">Submit</button>
-                    </div> 
-                </div>
-                
-                </div>
-              </blockquote>
-            </form>
+                <form action="/url" method="post">
+                    <blockquote class="blockquote mb-0">
+                        <p>CREATE YOUR SHORT-URL</p>
+                        <div>
+                            <div class="form-outline " style="width: 75%;">
+                                <input type="text" id="form12" name="url" placeholder="https://www.Google.com"
+                                    class="form-control" re />
+                                <label class="form-label" for="form12">url</label>
+                                <div class="float-end p-2">
+                                    <button class="btn btn-primary " type="submit">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </blockquote>
+                </form>
             </div>
         </div>
 
 
-        
-        
+
+
 
         <% if(locals.id){ %>
             <div class="card m-5 text-center" style="color: white; background: #000;">
-                <div class="card-body">New URL Generated: http://localhost:5000/jsly/<%=id %></div>
+                <div class="card-body">New URL Generated: http://localhost:5000/jsly/<%=id %>
+                </div>
             </div>
 
-                <div style="color: white; background: #000;"  class="btn" >
-                    <a href="/"  style="text-decoration: none;" >back to home</a>
-                </div>
-        <% } %>
+            <div style="color: white; background: #000;" class="btn">
+                <a href="/" style="text-decoration: none;">back to home</a>
+            </div>
+            <% } %>
 
                 <div class="overflow-auto pt-5">
 
@@ -81,7 +83,7 @@
                                             <%=url.redirectURL %>
                                         </td>
                                         <td>
-                                            <%="http://localhost:8001/jsly/"+ url.shortId %>
+                                            <%="http: //localhost:8001/jsly/"+ url.shortId %>
                                         </td>
                                         <td>
                                             <%= url.visitHistory.length %>
@@ -101,11 +103,11 @@
     <footer class="bg-light text-center text-lg-start pt-5">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2023 Copyright:
-          <p>All rights is reserved by js</p>
+            © 2023 Copyright:
+            <p>All rights is reserved by js</p>
         </div>
         <!-- Copyright -->
-      </footer>
+    </footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
 

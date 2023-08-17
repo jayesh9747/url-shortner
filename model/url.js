@@ -3,23 +3,23 @@ const mongoose = require('mongoose');
 // mongoose.connect(url,{useNewUrlParser: true})
 
 const urlSchema = new mongoose.Schema({
-    shortId : {
+    shortId: {
         type: String,
-        required : true,
+        required: true,
         unique: true,
     },
-    redirectURL:{
-        type:String,
-        required:true,
+    redirectURL: {
+        type: String,
+        required: true,
     },
-    visitHistory :[{timestamp:{type: Number}}],
+    visitHistory: [{ timestamp: { type: Number } }],
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref:"users",
+        ref: "users",
     }
 
-},{timestamps:true});
+}, { timestamps: true });
 
-const URL = mongoose.model('url',urlSchema);
+const URL = mongoose.model('url', urlSchema);
 
-module.exports =URL;
+module.exports = URL;

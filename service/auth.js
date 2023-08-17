@@ -1,22 +1,22 @@
 const jwt = require('jsonwebtoken');
 const secret = "Jayesh$49="
 
-const setUser=(user) =>{
+const setUser = (user) => {
   return jwt.sign({
-    _id:user._id,
+    _id: user._id,
     email: user.email,
-    role:user.role,
-  },secret);
-   
+    role: user.role,
+  }, secret);
+
 }
 
-const getUser = (token) =>{
-  if(!token) return null;
-  return jwt.verify(token,secret);
+const getUser = (token) => {
+  if (!token) return null;
+  return jwt.verify(token, secret);
 }
 
 
 module.exports = {
-    setUser,
-    getUser
+  setUser,
+  getUser
 };
