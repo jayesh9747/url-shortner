@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-// mongoose.connect(url,{useNewUrlParser: true})
-
 const urlSchema = new mongoose.Schema({
     shortId: {
         type: String,
