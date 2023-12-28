@@ -7,7 +7,6 @@ const setUser = (user) => {
     email: user.email,
     role: user.role,
   }, secret);
-
 }
 
 const getUser = (token) => {
